@@ -12,13 +12,13 @@ import java.util.Optional;
 public class Account {
 
     @Getter
-    private AccountId id;
+    private final AccountId id;
+
+    private final Money baselineBalance;
 
     @Getter
-    private Money baselineBalance;
+    private final ActivityWindow activityWindow;
 
-    @Getter
-    private ActivityWindow activityWindow;
 
     public static Account withoutId(
             Money baselineBalance,
