@@ -23,7 +23,6 @@ public class SendMoneyCommand extends SelfValidating<SendMoneyCommand> {
         this.sourceAccountId = sourceAccountId;
         this.targetAccountId = targetAccountId;
         this.money = money;
-        requireGraterThan(money, 0);
         this.validateSelf();
     }
 }
